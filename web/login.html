@@ -7,7 +7,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background-color: #87CEEB;
             margin: 0;
             display: flex;
             justify-content: center;
@@ -16,12 +16,17 @@
         }
 
         .login-container {
-            background: linear-gradient(to bottom right, #87CEEB, #FFD700); /* 渐变色背景 */
+            background: linear-gradient(to bottom right, #87CEEB, #FFD700);
             border: 1px solid #ddd;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             width: 300px;
+            text-align: center;
+        }
+
+        .login-container h2 {
+            color: #333;
         }
 
         .login-container label {
@@ -45,32 +50,22 @@
             cursor: pointer;
             width: 100%;
         }
-
     </style>
 </head>
 <body>
 
 <div class="login-container">
-    <label for="username">Username:</label>
-    <input type="text" id="username" name="username" required>
+    <h2>LOGIN</h2>
+    <form method="post" action="">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
 
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
 
-    <button onclick="login()">Login</button>
+        <button type="submit">Login</button>
+    </form>
 </div>
-
-<script>
-    function login() {
-        var username = document.getElementById("username").value;
-        var password = document.getElementById("password").value;
-
-        // 在这里可以添加登录逻辑，例如发送登录请求到服务器
-
-        // 这里只是一个简单的示例，显示登录信息
-        alert("Username: " + username + "\nPassword: " + password);
-    }
-</script>
 
 </body>
 </html>
